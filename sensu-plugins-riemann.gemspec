@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.date                   = Date.today.to_s
   s.description            = 'This plugin emits metrics from Sensu to Riemann.'
   s.email                  = '<sensu-users@googlegroups.com>'
-  s.executables            = Dir.glob('bin/**/*').map { |file| File.basename(file) }
+  s.executables            = Dir.glob('bin/**/*.rb').map { |file| File.basename(file) }
   s.files                  = Dir.glob('{bin,lib}/**/*') + %w(LICENSE README.md CHANGELOG.md)
   s.homepage               = 'https://github.com/sensu-plugins/sensu-plugins-riemann'
   s.license                = 'MIT'
@@ -37,11 +37,8 @@ Gem::Specification.new do |s|
   s.test_files             = s.files.grep(%r{^(test|spec|features)/})
   s.version                = SensuPluginsRiemann::Version::VER_STRING
 
-  s.add_runtime_dependency 'array_stats',      '0.6.0'
-  s.add_runtime_dependency 'ipaddress',        '0.8.0'
-  s.add_runtime_dependency 'rest-client',      '1.8.0'
   s.add_runtime_dependency 'sensu-plugin',     '1.2.0'
-  s.add_runtime_dependency 'simple-graphite',  '2.1.0'
+  s.add_runtime_dependency 'riemann-client',   '0.2.6'
 
   s.add_development_dependency 'bundler',                   '~> 1.7'
   s.add_development_dependency 'codeclimate-test-reporter', '~> 0.4'
