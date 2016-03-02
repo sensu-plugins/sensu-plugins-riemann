@@ -1,19 +1,31 @@
 language: ruby
 cache:
-  - bundler
+- bundler
 install:
-  - bundle install
+- bundle install
 rvm:
-  - 1.9.3
-  - 2.0
-  - 2.1
-  - 2.2
+- 1.9.3
+- 2.0
+- 2.1
+- 2.2
 notifications:
   email:
     recipients:
-      - sensu-plugin@sensu-plugins.io
+    - sensu-plugin@sensu-plugins.io
     on_success: change
     on_failure: always
-
 script:
-  - 'bundle exec rake default'
+- bundle exec rake default
+deploy:
+  provider: rubygems
+  api_key:
+    secure: EKtu/a099Uo0yjJH/bhBzVfNIjFh9+SOCG8dByYdXVq20W9sezV2ft5ci3YsMHpadA3P+ynpNxql2a4ie9q1ROHkW01J8gcSk0FkeofS8dAt26dEQXdnR7wXR2TAmZ2q5AJxB+5ZI7TzrImCAd0KRymobW06vWtObPQyMv6OQ6D971YV8Pnjki3a4aUC44rVVpKasytfjITcHEbtp9nJnugQsDx5s1fv3UauR/jqxZ1+tOHjPPb6uHshHj6IlcAVYmt6UhTYcg2boxtxJaGnjXXQM4TYFNeCGs0ePt9FI/ip44exnRWkrpArWEG0U5A3i/dLaRrnue1ASIGWm8QQTh7BwAAMLqbHHcAlssW4AuQeiMN6ZjU2QgzZRSVUiW8R2KklrQ5hEwmbc+5D4yZODcWA/rwE3HPHbkOMxJPQFUg1n8igI00i5oiPumWmkThtyHkOuPm9KNU6Ce6CCkRMvlPZYj2WkBWIsGqBjUr36vu1rL5lAkqKkpbqkDoIP8GA+Jyl9UkakoRxnDIMN2sGP1EOd8ZCDPd5YFbTnZWKduHATd9dOO9oa+mYyEG2Yxoh3PjSA9zW9tVjqDik5RQI87kP+j+/4llOcSS9gFrkccdQXoIns3dRCI3kyCoKDPGUKPCKh76ye/D0/KVLBLvoqwm4+6zRjP2ExccEgK48AHY=
+  gem: sensu-plugins-riemann
+  on:
+    tags: true
+    all_branches: true
+    rvm: 1.9.3
+    rvm: 2.0
+    rvm: 2.1
+    rvm: 2.2
+    repo: sensu-plugins/sensu-plugins-riemann
