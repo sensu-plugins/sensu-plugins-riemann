@@ -1,6 +1,0 @@
-{
-  "riemann" : {
-     "riemann_host" : "localhost",
-     "port" : 5555
-   }
-}

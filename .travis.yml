@@ -16,13 +16,15 @@ notifications:
     on_failure: always
 script:
 - bundle exec rake default
+- gem build sensu-plugins-riemann.gemspec
+- gem install sensu-plugins-riemann-*.gem
 deploy:
   provider: rubygems
   api_key:
-    secure: EKtu/a099Uo0yjJH/bhBzVfNIjFh9+SOCG8dByYdXVq20W9sezV2ft5ci3YsMHpadA3P+ynpNxql2a4ie9q1ROHkW01J8gcSk0FkeofS8dAt26dEQXdnR7wXR2TAmZ2q5AJxB+5ZI7TzrImCAd0KRymobW06vWtObPQyMv6OQ6D971YV8Pnjki3a4aUC44rVVpKasytfjITcHEbtp9nJnugQsDx5s1fv3UauR/jqxZ1+tOHjPPb6uHshHj6IlcAVYmt6UhTYcg2boxtxJaGnjXXQM4TYFNeCGs0ePt9FI/ip44exnRWkrpArWEG0U5A3i/dLaRrnue1ASIGWm8QQTh7BwAAMLqbHHcAlssW4AuQeiMN6ZjU2QgzZRSVUiW8R2KklrQ5hEwmbc+5D4yZODcWA/rwE3HPHbkOMxJPQFUg1n8igI00i5oiPumWmkThtyHkOuPm9KNU6Ce6CCkRMvlPZYj2WkBWIsGqBjUr36vu1rL5lAkqKkpbqkDoIP8GA+Jyl9UkakoRxnDIMN2sGP1EOd8ZCDPd5YFbTnZWKduHATd9dOO9oa+mYyEG2Yxoh3PjSA9zW9tVjqDik5RQI87kP+j+/4llOcSS9gFrkccdQXoIns3dRCI3kyCoKDPGUKPCKh76ye/D0/KVLBLvoqwm4+6zRjP2ExccEgK48AHY=
+    secure: HGycuehgz51LUKMywO2mEfXRa+IV/+TNVnUHOLsNiIP0b3OKHi7Rsu/4FE9PjcPzUeatDW2indrfq8dabnkOqO8eYcTJ16+qCR7okS1ZylSgg7B9FD7zttXe/Dq97K5xvtyctIbwKIA1XfKhw4VlAfNRJmQdsBlmElyRuY2dOFmXQr58GfUyh+8XeCOTcCwOf8nLmd+i7s5pFDIcZ9dmW3VIyhoYDBmxwhQBFh1MDdjk7tyFoOWmEJ5qzmBG4FkddPKb0WIlsrnNYtdWVyx2kC6d5tCc8eRXZXeWRsc124WN6u5+ljsz25gkulyOkY24RMMEw0mjU+HZNUMsbQH/hP6TDBX8n1am71K7oxw0qoAgJSqZL6MTsk8cuJuTMP0z2zF34L5vfwPjxtR4glUhifAu7JSXkXY6aFRuGUMrlyCKefbUjL1xLD+Y5HsUujuYdv1P2U6bvZwwJQKRGxlJVe5tQV29w5wnP3uAXXwgHPLqrXVr2UOwkjSpOpsLaoK9vMaw+nC23DCvWup6ATEmw4vL/wDPgbcKPjrFjaFtyngYJytVoA+n2UOaEhOWh46GAgBorrw4W2tiVgymuDDAXsVJq6tuk2jyloQvot3jQzNOYm5I9aN3fYbY6lUW4FImhcrqKw7uri+rwZ1DMPgsSMNWb2nLWohtFfYX0jmHtOk=
   gem: sensu-plugins-riemann
   on:
-    tags: true
+    ags: true
     all_branches: true
     rvm: 1.9.3
     rvm: 2.0

@@ -5,7 +5,6 @@
 [![Code Climate](https://codeclimate.com/github/sensu-plugins/sensu-plugins-riemann/badges/gpa.svg)](https://codeclimate.com/github/sensu-plugins/sensu-plugins-riemann)
 [![Test Coverage](https://codeclimate.com/github/sensu-plugins/sensu-plugins-riemann/badges/coverage.svg)](https://codeclimate.com/github/sensu-plugins/sensu-plugins-riemann)
 [![Dependency Status](https://gemnasium.com/sensu-plugins/sensu-plugins-riemann.svg)](https://gemnasium.com/sensu-plugins/sensu-plugins-riemann)
-[![Codeship Status for sensu-plugins/sensu-plugins-riemann](https://codeship.com/projects/c6f4f5a0-db95-0132-445b-5ad94843e341/status?branch=master)](https://codeship.com/projects/79664)
 
 ## Functionality
 
@@ -13,6 +12,15 @@
  * bin/handler-riemann-metrics
 
 ## Usage
+
+```json
+{
+  "riemann" : {
+     "riemann_host" : "localhost",
+     "port" : 5555
+   }
+}
+```
 
 ## Installation
 
