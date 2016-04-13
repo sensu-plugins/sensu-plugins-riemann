@@ -24,7 +24,7 @@ deploy:
     secure: HGycuehgz51LUKMywO2mEfXRa+IV/+TNVnUHOLsNiIP0b3OKHi7Rsu/4FE9PjcPzUeatDW2indrfq8dabnkOqO8eYcTJ16+qCR7okS1ZylSgg7B9FD7zttXe/Dq97K5xvtyctIbwKIA1XfKhw4VlAfNRJmQdsBlmElyRuY2dOFmXQr58GfUyh+8XeCOTcCwOf8nLmd+i7s5pFDIcZ9dmW3VIyhoYDBmxwhQBFh1MDdjk7tyFoOWmEJ5qzmBG4FkddPKb0WIlsrnNYtdWVyx2kC6d5tCc8eRXZXeWRsc124WN6u5+ljsz25gkulyOkY24RMMEw0mjU+HZNUMsbQH/hP6TDBX8n1am71K7oxw0qoAgJSqZL6MTsk8cuJuTMP0z2zF34L5vfwPjxtR4glUhifAu7JSXkXY6aFRuGUMrlyCKefbUjL1xLD+Y5HsUujuYdv1P2U6bvZwwJQKRGxlJVe5tQV29w5wnP3uAXXwgHPLqrXVr2UOwkjSpOpsLaoK9vMaw+nC23DCvWup6ATEmw4vL/wDPgbcKPjrFjaFtyngYJytVoA+n2UOaEhOWh46GAgBorrw4W2tiVgymuDDAXsVJq6tuk2jyloQvot3jQzNOYm5I9aN3fYbY6lUW4FImhcrqKw7uri+rwZ1DMPgsSMNWb2nLWohtFfYX0jmHtOk=
   gem: sensu-plugins-riemann
   on:
-    ags: true
+    tags: true
     all_branches: true
     rvm: 1.9.3
     rvm: 2.0
