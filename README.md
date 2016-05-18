@@ -17,7 +17,7 @@
 {
   "riemann" : {
      "riemann_host" : "localhost",
-     "port" : 5555
+     "riemann_port" : 5555
    }
 }
 ```
