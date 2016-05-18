@@ -26,7 +26,7 @@ require 'rubygems' if RUBY_VERSION < '1.9.0'
 require 'sensu-handler'
 require 'riemann/client'
 
-class Riemann < Sensu::Handler
+class RiemannHandler < Sensu::Handler
   # override filters from Sensu::Handler. not appropriate for metric handlers
   def filter; end
 
