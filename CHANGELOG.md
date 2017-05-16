@@ -16,7 +16,7 @@ This CHANGELOG follows the format listed at [Keep A Changelog](http://keepachang
 - Rename the `Riemann` class to `RiemannHandler` to avoid collision with riemann-client (@jamtur01)
 
 ### Changed
-- Loosen `sensu-plugin` dependency to `<~ 1.2` (@eheydrick)
+- Loosen `sensu-plugin` dependency to `~> 1.2` (@eheydrick)
 
 ## 0.0.1 - 2015-09-03
 ### Added
